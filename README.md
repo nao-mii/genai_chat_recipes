@@ -20,7 +20,7 @@ genai_recipe_chat/
 ├─ data/
 │  └─ recipes_sample.json      # dataset inicial pequeno (exemplos)
 ├─ app/
-│  ├─ llm_provider.py        # cliente OpenAI + timeouts + tratamento de erro
+│  ├─ llm_provider.py        # cliente Azure OpenAI + timeouts + tratamento de erro
 │  ├─ recipe_engine.py       # filtros: despensa, restrições, tempo, ranking
 │  └─ prompts.py             # prompts do sistema/usuário
 ├─ streamlit_app.py          # interface do chatbot
@@ -31,7 +31,7 @@ genai_recipe_chat/
 # 🔧 Requisitos
 
 Python 3.9+ (recomendado 3.10/3.11).
-Chave de API do OpenAI.
+Chave de API do Azure OpenAI.
 
 # ⚙️ Instalação
 
@@ -50,14 +50,17 @@ Plain Textstreamlit==1.40.0openai==1.52.2httpx==0.27.2pyyaml==6.0.2pydantic==2.9
 Edite assets/settings.yml:
 ```text
 llm:
-    provider: "openai"
-    model: "gpt-4o-mini"       # ajuste conforme conta/deploy
-    temperature: 0.3
-    max_tokens: 1000
+  provider: "openai"   
+  model: "gpt-4o-mini" --ajuste conforme o seu
+  temperature: 0.3
+  max_tokens: 1000 
+  deployment: "gpt-4.1" --ajuste conforme o seu
+  ##use_proxy: false
 credentials:
-    openai_api_key: "sk-COLOQUE_SUA_CHAVE_AQUI"
+  azure_openai_api_key: -
+  azure_openai_endpoint: -
+  azure_openai_api_version: -
 ```
-OpenAI: gere a chave em https://platform.openai.com/account/api-keys
 
 # ▶️ Como Executar
 PowerShell
@@ -70,13 +73,19 @@ O Streamlit abrirá o app em http://localhost:8501.
 Se quiser testar a API antes de iniciar o app:
 ```text
 python - << 'PY'
-from openai import OpenAI
+from openai import AzureOpenAI
 import httpx
-client = OpenAI(api_key="sk-...", http_client=httpx.Client(timeout=30.0))
+client = AzureOpenAI(
+    api_key="sua_api_key",
+    azure_endpoint="seu_endpoint",
+    api_version="sua_versao",
+    http_client=httpx.Client(timeout=30.0)
+)
 r = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="seu_deployment",
     messages=[{"role":"user","content":"Diga 'ok'"}],
-    max_tokens=5)
+    max_tokens=5
+)
 print(r.choices[0].message.content)
 PY
 ```
@@ -93,14 +102,6 @@ Fixe o httpx:
 ```text
 pip install "httpx==0.27.2"Mostrar mais linhas
 ```
-
-## APIConnectionError: Connection error
-- Verifique sua internet.
-- Tente curl https://api.openai.com/v1/models.
-- Se abrir página Zscaler/antivírus (status 200 com HTML), sua rede está interceptando/bloqueando a OpenAI.
-    - Soluções:
-        - Teste 3G/5G do celular.
-
 
 # 🛡️ Boas Práticas
 
