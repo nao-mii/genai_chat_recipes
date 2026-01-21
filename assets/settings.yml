@@ -3,9 +3,13 @@ llm:
   model: "gpt-4o-mini" 
   temperature: 0.3
   max_tokens: 1000 
+  deployment: "gpt-4.1"
   ##use_proxy: false
 credentials:
-  openai_api_key: "SUA_CHAVE"
+  azure_openai_api_key: -
+  azure_openai_endpoint: -
+  azure_openai_api_version: -
+  ##openai_api_key: "SUA_CHAVE"
 app:
   language: "pt-BR"
   default_servings: 2

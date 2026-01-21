@@ -22,7 +22,11 @@
     "time_minutes": 25,
     "cuisine": "brasileira",
     "yield": "2 porções",
-    "tags": ["rápido", "prato_principal", "leve"]
+    "tags": ["rápido", "prato_principal", "leve"],
+    "nutrition": {
+      "kcal_total": 960,
+      "kcal_per_serving": 480
+    }
   },
   {
     "id": "r002",
@@ -47,7 +51,11 @@
     "time_minutes": 20,
     "cuisine": "italiana",
     "yield": "2–3 porções",
-    "tags": ["massa", "rápido", "sem_lactose_opcional"]
+    "tags": ["massa", "rápido", "sem_lactose_opcional"],
+    "nutrition": {
+      "kcal_total": 1800,
+      "kcal_per_serving": 600
+    }
   },
   {
     "id": "r003",
@@ -69,7 +77,11 @@
     "time_minutes": 15,
     "cuisine": "internacional",
     "yield": "2 porções",
-    "tags": ["acompanhamento", "fit", "rápido"]
+    "tags": ["acompanhamento", "fit", "rápido"],
+    "nutrition": {
+      "kcal_total": 270,
+      "kcal_per_serving": 135
+    }
   },
   {
     "id": "r004",
@@ -94,7 +106,11 @@
     "time_minutes": 30,
     "cuisine": "brasileira",
     "yield": "3 porções",
-    "tags": ["panelinha", "sem_carne", "tradicional"]
+    "tags": ["panelinha", "sem_carne", "tradicional", "fit"],
+    "nutrition": {
+      "kcal_total": 980,
+      "kcal_per_serving": 327
+    }
   },
   {
     "id": "r005",
@@ -121,7 +137,11 @@
     "time_minutes": 25,
     "cuisine": "mexicana",
     "yield": "6 tacos",
-    "tags": ["street_food", "rápido", "prato_principal"]
+    "tags": ["street_food", "rápido", "prato_principal", "fit"],
+    "nutrition": {
+      "kcal_total": 1440,
+      "kcal_per_serving": 240
+    }
   },
   {
     "id": "r006",
@@ -146,7 +166,11 @@
     "time_minutes": 15,
     "cuisine": "internacional",
     "yield": "6 unidades",
-    "tags": ["café_da_manhã", "lanche", "rápido"]
+    "tags": ["café_da_manhã", "lanche", "rápido", "fit"],
+    "nutrition": {
+      "kcal_total": 520,
+      "kcal_per_serving": 87
+    }
   },
   {
     "id": "r007",
@@ -171,7 +195,11 @@
     "time_minutes": 30,
     "cuisine": "brasileira",
     "yield": "4 porções",
-    "tags": ["clássico", "caseiro", "sustança"]
+    "tags": ["clássico", "caseiro", "sustança", "fit"],
+    "nutrition": {
+      "kcal_total": 1600,
+      "kcal_per_serving": 400
+    }
   },
   {
     "id": "r008",
@@ -197,6 +225,169 @@
     "time_minutes": 10,
     "cuisine": "mediterrânea",
     "yield": "2–3 porções",
-    "tags": ["salada", "fresco", "rápido"]
+    "tags": ["salada", "fresco", "rápido", "fit"],
+    "nutrition": {
+      "kcal_total": 660,
+      "kcal_per_serving": 220
+    }
+  },
+  {
+    "id": "r009",
+    "title": "Omelete de Legumes na Frigideira",
+    "ingredients": [
+      "2 ovos",
+      "1/2 cebola picada",
+      "1/2 tomate picado",
+      "1/4 de pimentão picado",
+      "Sal e pimenta a gosto",
+      "Azeite para untar"
+    ],
+    "instructions": [
+      "Bata os ovos com sal e pimenta.",
+      "Refogue os legumes em frigideira untada.",
+      "Despeje os ovos batidos e cozinhe em fogo baixo até firmar."
+    ],
+    "url": "",
+    "partition": "train",
+    "dietary": ["sem_gluten", "vegetariano", "low_carb"],
+    "time_minutes": 10,
+    "cuisine": "internacional",
+    "yield": "1 porção",
+    "tags": ["rápido", "café_da_manhã", "leve", "fit"],
+    "nutrition": {
+      "kcal_total": 260,
+      "kcal_per_serving": 260
+    }
+  },
+  {
+    "id": "r010",
+    "title": "Tapioca Recheada com Frango",
+    "ingredients": [
+      "3 colheres (sopa) de goma de tapioca",
+      "100 g de frango desfiado",
+      "1 colher (sopa) de requeijão (opcional)",
+      "Sal e pimenta a gosto"
+    ],
+    "instructions": [
+      "Aqueça a frigideira e espalhe a goma até unir.",
+      "Adicione o frango temperado e o requeijão.",
+      "Dobre, aqueça mais um pouco e sirva."
+    ],
+    "url": "",
+    "partition": "train",
+    "dietary": ["sem_gluten"],
+    "time_minutes": 10,
+    "cuisine": "brasileira",
+    "yield": "1 unidade",
+    "tags": ["lanche", "rápido", "fit"],
+    "nutrition": {
+      "kcal_total": 340,
+      "kcal_per_serving": 340
+    }
+  },
+  {
+    "id": "r011",
+    "title": "Strogonoff de Grão-de-Bico (Vegano)",
+    "ingredients": [
+      "2 xícaras de grão-de-bico cozido",
+      "1/2 cebola picada",
+      "1 dente de alho",
+      "200 ml de leite de coco",
+      "2 colheres (sopa) de molho de tomate",
+      "Sal e páprica a gosto"
+    ],
+    "instructions": [
+      "Refogue cebola e alho até dourar.",
+      "Adicione grão-de-bico, molho de tomate e temperos.",
+      "Junte o leite de coco e cozinhe por 5–8 minutos."
+    ],
+    "url": "",
+    "partition": "train",
+    "dietary": ["vegan", "sem_gluten", "sem_lactose"],
+    "time_minutes": 20,
+    "cuisine": "internacional",
+    "yield": "3 porções",
+    "tags": ["prato_principal", "sem_carne", "fit"],
+    "nutrition": {
+      "kcal_total": 950,
+      "kcal_per_serving": 317
+    }
+  },
+  {
+    "id": "r012",
+    "title": "Banana com Canela na Frigideira",
+    "ingredients": [
+      "2 bananas maduras em rodelas",
+      "1 colher (chá) de açúcar ou mel",
+      "Canela em pó a gosto"
+    ],
+    "instructions": [
+      "Leve as bananas à frigideira em fogo médio.",
+      "Polvilhe açúcar e canela.",
+      "Doure levemente dos dois lados e sirva."
+    ],
+    "url": "",
+    "partition": "train",
+    "dietary": ["vegan", "sem_gluten", "sem_lactose"],
+    "time_minutes": 5,
+    "cuisine": "internacional",
+    "yield": "2 porções",
+    "tags": ["sobremesa", "rápido", "doce", "fit"],
+    "nutrition": {
+      "kcal_total": 200,
+      "kcal_per_serving": 100
+    }
+  },
+  {
+    "id": "r013",
+    "title": "Mousse Rápida de Chocolate (Vegana)",
+    "ingredients": [
+      "1 abacate médio",
+      "2 colheres (sopa) de cacau em pó",
+      "2 colheres (sopa) de melado ou açúcar",
+      "1 pitada de sal"
+    ],
+    "instructions": [
+      "Bata todos os ingredientes no liquidificador.",
+      "Ajuste a doçura a gosto.",
+      "Leve à geladeira por 20 minutos antes de servir."
+    ],
+    "url": "",
+    "partition": "train",
+    "dietary": ["vegan", "sem_gluten", "sem_lactose"],
+    "time_minutes": 10,
+    "cuisine": "internacional",
+    "yield": "2 porções",
+    "tags": ["sobremesa", "fit", "sem_lactose"],
+    "nutrition": {
+      "kcal_total": 472,
+      "kcal_per_serving": 236
+    }
+  },
+  {
+    "id": "r014",
+    "title": "Panqueca Doce de Banana e Aveia",
+    "ingredients": [
+      "1 banana madura amassada",
+      "1 ovo",
+      "2 colheres (sopa) de aveia",
+      "1 pitada de canela"
+    ],
+    "instructions": [
+      "Misture todos os ingredientes até ficar homogêneo.",
+      "Grelhe porções da massa em frigideira untada.",
+      "Dou­re dos dois lados e sirva."
+    ],
+    "url": "",
+    "partition": "train",
+    "dietary": ["sem_lactose"],
+    "time_minutes": 10,
+    "cuisine": "internacional",
+    "yield": "2 unidades",
+    "tags": ["doce", "café_da_manhã", "rápido", "fit"],
+    "nutrition": {
+      "kcal_total": 210,
+      "kcal_per_serving": 105
+    }
   }
 ]
