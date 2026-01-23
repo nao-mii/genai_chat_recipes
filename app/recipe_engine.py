@@ -46,7 +46,7 @@ def build_llm_messages(system_prompt: str, user_guidance: str, context: Dict[str
     ctext = ""
     if candidates:
         ctext = "\nReceitas candidatas locais:\n" + "\n".join(
-            [f"- {c['title']} ({c.get('time_minutes','?')} min) | ingredientes: {', '.join(c.get('ingredients', []))}" for c in candidates]
+            [f"- {c['title']} ({c.get('time_minutes','?')} min) | ({c.get('nutrition', {}).get('kcal_per_serving', '?')} kcal/porção) | ingredientes: {', '.join(c.get('ingredients', []))}" for c in candidates]
         )
     messages = [
         {"role": "system", "content": system_prompt},

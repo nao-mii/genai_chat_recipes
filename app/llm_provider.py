@@ -41,8 +41,8 @@ def get_llm():
             )
         return chat
 
-    temperature = float(llm_cfg.get("temperature", 0.3))
-    max_tokens = int(llm_cfg.get("max_tokens", 800))
+    temperature = llm_cfg.get("temperature")
+    max_tokens = llm_cfg.get("max_tokens")
 
     # Cliente httpx SEM proxy, com timeout explícito
     http_client = httpx.Client(timeout=30.0)
