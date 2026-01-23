@@ -1,6 +1,6 @@
 # 🍳 Visão Geral
 
-GenAI Recipe Chat é um chatbot de receitas em Python + Streamlit que usa IA para sugerir receitas personalizadas com base no que o usuário tem em casa (modo despensa), nas restrições alimentares, no tempo disponível, no tipo de cozinha e no número de porções.
+The Food Helper é um chatbot de receitas em Python + Streamlit que usa IA para sugerir receitas personalizadas com base no que o usuário tem em casa (modo despensa), nas restrições alimentares, no tempo disponível, no tipo de cozinha e no número de porções.
 Por trás da interface simples, o app combina filtros determinísticos sobre um dataset local (JSON) e geração de texto via OpenAI para entregar resultados úteis e seguros.
 
 # Principais recursos
@@ -37,13 +37,15 @@ Chave de API do Azure OpenAI.
 
 Windows / PowerShell
 ``` text
-PowerShellcd C:\caminho\para\genai_recipe_chatpython -m venv venv.\venv\Scripts\activatepython -m pip install --upgrade pippip install -r requirements.txtMostrar mais linhas
+C:\caminho\para\genai_recipe_chatpython -m venv venv.\venv\Scripts\activatepython -m pip install --upgrade pippip install -r requirements.txt
 ```
 macOS / Linux
 ```text
-Shellcd ~/genai_recipe_chatpython3 -m venv venvsource venv/bin/activatepython3 -m pip install --upgrade pippip install -r requirements.txtMostrar mais linhas
+~/genai_recipe_chatpython3 -m venv venvsource venv/bin/activatepython3 -m pip install --upgrade pippip install -r requirements.txt
+``` 
 requirements.txt (recomendado):
-Plain Textstreamlit==1.40.0openai==1.52.2httpx==0.27.2pyyaml==6.0.2pydantic==2.9.2python-dotenv==1.0.1pandas==2.2.3Mostrar mais linhas
+```text
+Plain Textstreamlit==1.40.0openai==1.52.2httpx==0.27.2pyyaml==6.0.2pydantic==2.9.2python-dotenv==1.0.1pandas==2.2.3
 ```
 
 # 🔐 Configuração de Credenciais
@@ -57,15 +59,16 @@ llm:
   deployment: "gpt-4.1" --ajuste conforme o seu
   ##use_proxy: false
 credentials:
-  azure_openai_api_key: -
-  azure_openai_endpoint: -
-  azure_openai_api_version: -
+  azure_openai_api_key: --ajuste conforme o seu
+  azure_openai_endpoint: --ajuste conforme o seu
+  azure_openai_api_version: --ajuste conforme o seu
 ```
 
 # ▶️ Como Executar
 PowerShell
 ``` text
-# no mesmo venvpython -m streamlit run streamlit_app.pyMostrar mais linhas
+# no mesmo venv
+python -m streamlit run streamlit_app.pyMostrar mais linhas
 ```
 O Streamlit abrirá o app em http://localhost:8501.
 

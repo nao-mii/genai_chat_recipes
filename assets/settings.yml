@@ -6,9 +6,9 @@ llm:
   deployment: "gpt-4.1"
   ##use_proxy: false
 credentials:
-  azure_openai_api_key: -
-  azure_openai_endpoint: -
-  azure_openai_api_version: -
+  azure_openai_api_key: 
+  azure_openai_endpoint: 
+  azure_openai_api_version: 
 app:
   language: "pt-BR"
   default_servings: 2
