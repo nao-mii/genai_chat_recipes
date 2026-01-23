@@ -81,7 +81,6 @@ O Streamlit abrirá o app em http://localhost:8501.
 # 🧪 Teste Rápido de Conexão (Isolado)
 Se quiser testar a API antes de iniciar o app:
 ```text
-python - << 'PY'
 from openai import AzureOpenAI
 import httpx
 client = AzureOpenAI(
@@ -96,7 +95,6 @@ r = client.chat.completions.create(
     max_tokens=5
 )
 print(r.choices[0].message.content)
-PY
 ```
 # 🚑 Solução de Problemas (FAQ)
 ## “streamlit não reconhecido”
