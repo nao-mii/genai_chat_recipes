@@ -45,7 +45,7 @@ macOS / Linux
 ``` 
 requirements.txt (recomendado):
 ```text
-Plain Textstreamlit==1.40.0openai==1.52.2httpx==0.27.2pyyaml==6.0.2pydantic==2.9.2python-dotenv==1.0.1pandas==2.2.3
+streamlit==1.40.0openai==1.52.2httpx==0.27.2pyyaml==6.0.2pydantic==2.9.2python-dotenv==1.0.1pandas==2.2.3
 ```
 
 # 🔐 Configuração de Credenciais
